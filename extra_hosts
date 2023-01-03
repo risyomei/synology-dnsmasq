@@ -1,0 +1,5 @@
+# Additional hosts must be added
+192.168.0.1 asus asus.meleeh.com
+192.168.0.6 nas-ubuntu nas-ubuntu.meleeh.com
+192.168.0.10 nas nas.meleeh.com
+192.168.0.20 ve ve.meleeh.com

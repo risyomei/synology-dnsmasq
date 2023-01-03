@@ -1,0 +1,21 @@
+version: '3'
+services:
+  dnsmasq:
+    network_mode: "host"
+    restart: always
+    image: 4km3/dnsmasq
+    container_name: dnsmasq
+    privileged: true
+    environment:
+      TZ: "Asia/Tokyo"
+#     ports:
+#       - "53:53/udp"
+#       - "53:53/tcp"
+    volumes:
+      - './dnsmasq.more.conf:/etc/dnsmasq.more.conf'
+      - './dnsmasq.conf:/etc/dnsmasq.conf'
+      - './extra_hosts:/etc/extra_hosts'
+ #   dns:
+ #     - 8.8.8.8
+    cap_add:
+      - NET_ADMIN
